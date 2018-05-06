@@ -4,7 +4,7 @@ title:        "我是新的创建希望可以OK"
 subtitle:     "JEKYLL真的很奇怪"
 date:         2017-05-05 12:00:00
 author:       "Kim"
-header-img:   "/img/2018-05-06.jpg"
+header-img:   "img/2018-05-06.jpg"
 header-mask:  0.3
 catalog:      true
 multilingual: false
