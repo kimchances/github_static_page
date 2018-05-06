@@ -1,5 +1,11 @@
 ---
 layout: default
-title: test title
+title: root index
 ---
-<p>我在测试webstorm的ADD&&PUSH</p>
+<p>我这里是index的Content,测试一下YAML格式</p>
+<p>我的文章列表,for循环_posts,遍历列表</p>
+<ul>
+    {% for post in site.posts %}
+    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
