@@ -2,7 +2,7 @@
 layout:       post
 title:        "MARKDOWN语法还不是很熟悉"
 subtitle:     "今天上班踩车压水, 下班被水湿身"
-date:         2018-05-06 19:27:00
+date:         2018-05-07 19:27:00 +0800
 author:       "Kim"
 header-img:   "http://i4.bvimg.com/644784/b44747547f8defed.jpg"
 header-mask:  0.3

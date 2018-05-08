@@ -2,7 +2,7 @@
 layout:       post
 title:        "我是新的创建希望可以OK"
 subtitle:     "JEKYLL真的很奇怪"
-date:         2018-05-05 12:00:00
+date:         2018-05-06 12:00:00 +0800
 author:       "Kim"
 header-img:   "http://i1.bvimg.com/644784/c7acfb2160be417c.jpg"
 header-mask:  0.3

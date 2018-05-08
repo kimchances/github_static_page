@@ -1,0 +1,24 @@
+---
+layout:       post
+title:      "备案"
+subtitle:     "域名PASS,网站Start"
+date:         2018-05-8 19:27:00 +0800
+author:       "Kim"
+header-img:   "http://i2.bvimg.com/644784/db11d6d505677e93.jpg"
+header-mask:  0.3
+catalog:      true
+multilingual: false
+tags:
+    - 备案
+    - Maven
+    - 科学上网
+---
+# 关于今天
+### Web
+今天域名备案通过了,然后开始弄网站的备案.果然大陆的域名就是麻烦.不过还是耐心等候
+### 科学上网
+忽然发现 Github 上面很多用 VP S架的 SSR.干脆偶尔用这个算啦哈
+### Maven
+发现公司的Java 项目也有Maven,而且能够直接 Tomcat Start ,那为什么我Clone Github 上的项目却不行呢,一定是我那里有问题.
+
+
