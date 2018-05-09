@@ -1,0 +1,28 @@
+---
+layout:       post
+title:      "备案-2"
+subtitle:     "网站名称怎么叫"
+date:         2018-05-09 16:31:00 +0800
+author:       "Kim"
+header-img:   "http://i2.bvimg.com/644784/db11d6d505677e93.jpg"
+header-mask:  0.3
+catalog:      true
+multilingual: false
+tags:
+    - 备案
+    - Servlet
+---
+# 关于今天
+### Web
+>   今天备案的网站名称全都被打回：
+> - "Kim进行技术研究的网站"
+> - "你帮我随便取一个名字吧"[知乎看到有人说可以,结果客服说我没有权利帮你改]
+
+#####最后过了的网站名称为: **我的学习地盘**
+######真是TMD羞耻.哈哈
+
+### Java
+>   昨晚跟旧同事拿了Java的项目,简单的Servelet接参数,可是项目业务逻辑太庞大,缺了一些类找不着.. 什么鬼啊啊
+>   最后决定还是捣鼓一下 Linux 部署 Maven项目,从别人框架开始写一些业务逻辑.
+
+
