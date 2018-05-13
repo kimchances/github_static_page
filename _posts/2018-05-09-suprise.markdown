@@ -4,7 +4,7 @@ title:      "备案-2"
 subtitle:     "网站名称怎么叫"
 date:         2018-05-09 16:31:00 +0800
 author:       "Kim"
-header-img:   "http://i2.bvimg.com/644784/db11d6d505677e93.jpg"
+header-img:   "/img/default-bg.jpg"
 header-mask:  0.3
 catalog:      true
 multilingual: false

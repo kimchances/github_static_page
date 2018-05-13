@@ -4,7 +4,7 @@ title:        "MARKDOWN语法还不是很熟悉"
 subtitle:     "今天上班踩车压水, 下班被水湿身"
 date:         2018-05-07 19:27:00 +0800
 author:       "Kim"
-header-img:   "http://i4.bvimg.com/644784/b44747547f8defed.jpg"
+header-img:   "/img/default-bg.jpg"
 header-mask:  0.3
 catalog:      true
 multilingual: false
@@ -32,5 +32,5 @@ tags:
 *   谁知道下班的时候却淋了一个落汤鸡.
 *   单车也放在了公司.
 ### 下了公车后的照片
-![Markdown](http://i4.bvimg.com/644784/cd1dad4472a5e220.jpg)
+![Markdown](/helloworld/img/2018-5-7.jpg)
 

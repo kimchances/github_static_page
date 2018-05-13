@@ -4,7 +4,7 @@ title:      "备案"
 subtitle:     "域名PASS,网站Start"
 date:         2018-05-8 19:27:00 +0800
 author:       "Kim"
-header-img:   "http://i2.bvimg.com/644784/db11d6d505677e93.jpg"
+header-img:   "/img/default-bg.jpg"
 header-mask:  0.3
 catalog:      true
 multilingual: false

@@ -1,8 +1,9 @@
-# Kim blog
-过程异常曲折
-有些相对路径有问
-我就改成了绝对路径
-helloworld
-以后有问题就GG.
-
-#Jekyll玩的真的累
+ $.ajax({
+        url: "webAction.do",
+        type: 'POST',
+        dataType: 'JSON',
+        data: {"serverCode":"getIndexCategory"},
+        async: false, //同步才能return
+    }).done(function(data) { //done代替success
+        console.info(data):
+    });
