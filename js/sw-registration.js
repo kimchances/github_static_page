@@ -21,9 +21,8 @@ function handleRegistration(registration){
       if (navigator.serviceWorker.controller) {
         console.log('SW is updated');
       } else {
-        console.log('A Visit without previous SW');
         createSnackbar({
-          message: 'App ready for offline use.',
+          message: '网页已准备好离线阅读',
           duration: 3000
         })
       }

@@ -20,7 +20,7 @@ hello: "UR The WeberFucker"
         </div>
     </a>
     <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+         {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} 于 {{ post.date | date: "%B %-d, %Y" }} {上传
     </p>
 </div>
 <hr>
