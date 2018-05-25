@@ -1,0 +1,33 @@
+---
+layout:       post
+title:        "好忙啊啊啊"
+subtitle:     "...."
+date:         2018-05-25 19:28:58 +0800
+author:       "Kim"
+header-img:   "/img/default-bg.jpg"
+header-mask:  0.3
+catalog:      true
+multilingual: false
+tags:
+    - 个人网站
+---
+
+### **准备开始我的爬坑日志!!**
+
+
+----------
+
+
+### Web
+
+>  大部分项目都录入了数据库~
+
+### 备案
+>  公安备案通过了.  网站所有搞定.
+
+
+### 最近的学习
+>   最近公司的项目实在是忙呀....
+>   不过还是继续学习React.
+>   然后尽快掌握一种前端打包工具.  先学 Webpack
+>   加油啊....挤出时间来呀!!!!!!!!!!!
