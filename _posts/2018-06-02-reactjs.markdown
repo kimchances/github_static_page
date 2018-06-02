@@ -22,7 +22,7 @@ tags:
  -  试了一下类名的绑定.
 	 - 没有效果,  不知是写错了方法还是本身就不支持这种做法.
 
-``` html
+``` less
   <body>
     <div id="example"></div>
     <div class="example"></div>
@@ -48,7 +48,7 @@ tags:
 	 -  类名的名称如果不是大写字母的话, 会没反应.
 	 -   类名命名规则本来就是大写开头~哈哈
 
-``` html
+``` less
 <body>
     <div id="example"></div>
     <script type="text/babel">
@@ -76,7 +76,7 @@ tags:
 
 > 反观自定义属性 test  ,只需要一对大括号就完事了.
 
-``` html
+``` less
 <body>
     <div id="example"></div>
     <script type="text/babel">
@@ -104,7 +104,7 @@ tags:
 	 -  onchange 的时候 读取该字段,拼凑一个 JSON .
 	 -  然后 this.setState 直接传入该JSON. [美滋滋]
 
-``` html
+``` less
  <body>
     <div id="example"></div>
     <script type="text/babel">
@@ -148,7 +148,7 @@ componentDidMount 方法在组件加载后执行.[直接跑,根据不同的结�
 
 	 -  也可以使用正常的数组组成
 
-``` html
+``` less
 let data = this.state.data.items;
 let results = [];
 data.forEach(dataSon => {
@@ -159,7 +159,7 @@ data.forEach(dataSon => {
   <ul>{results}</ul>
 ```
 
-``` html
+``` less
  <body>
 <div id="example"></div>
 <script type="text/babel">

@@ -1,0 +1,37 @@
+---
+layout:       post
+title:        "about React.js"
+subtitle:     "最近的基础理解"
+date:         2018-5-29 15:00:19 +0800
+author:       "Kim"
+header-img:   "/img/default-bg.jpg"
+header-mask:  0.3
+catalog:      true
+multilingual: false
+tags:
+    - React
+---
+----------
+### React.js Quession
+##### 创建组件的方式
+
+ - ***React.createClass***
+ - ***extends Component***
+
+>了解到 createClass 是符合ES5的函数对象, 反正就是一个 function.
+``` less
+	React.createClass({
+	})
+```
+
+> 而entends符合于 ES6 对 Class 类的定义. 于 createClass 差异性主要在于部分属性定义的不同.
+``` less
+	class myFirstReact extends React.Component({
+	})
+```
+
+### 发现了一个小问题
+> 我在阅读类似于 createClass() 方法调用实现的时候. 吸收能力较强.
+> 看这些我在菜鸟联盟看的很流畅[...吸收真快~哈哈]
+>> 果然实现逻辑都是统一的,可是实现过程却有所不同.
+> 可是阅读Class Es6方面的有时候有点迟钝[我要尽快熟悉这些代码风格]
