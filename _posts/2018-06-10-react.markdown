@@ -1,0 +1,96 @@
+---
+layout:       post
+title:        "React Record 1.2"
+subtitle:     基于阮一峰 JSTRAINING
+date:         2018-06-10 14:46:37 +0800
+author:       "Kim"
+header-img:   "/img/default-bg.jpg"
+header-mask:  0.3
+catalog:      true
+multilingual: false
+tags:
+    - React
+---
+
+
+## 1. 第三方组件
+
+
+``const {LineChart, Line, XAxis, YAxis, CartesianGrid}`` 定义了相应对象
+
+``render() {}`` 直接使用相应对象
+
+data里面的Key值应该有官方文档.
+
+好吧, 这个例子随便看看的.
+
+``` less
+  <body>
+    <div id="example" style="width: 1000px;height: 800px;"></div>
+    <script type="text/babel">
+const {LineChart, Line, XAxis, YAxis, CartesianGrid} = Recharts;
+const data = [
+      {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
+      {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
+      {name: 'Page C', uv: 2000, pv: 9800, amt: 2290},
+      {name: 'Page D', uv: 2780, pv: 3908, amt: 2000},
+      {name: 'Page E', uv: 1890, pv: 4800, amt: 2181},
+      {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
+      {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
+];
+
+const TinyLineChart = React.createClass({
+	render () {
+  	return (
+  <LineChart width={1000} height={400} data={data}>
+    <XAxis dataKey="name"/>
+    <YAxis/>
+    <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
+    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+    <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
+  </LineChart>
+    );
+  }
+})
+ReactDOM.render(
+  <TinyLineChart />,
+  document.getElementById('example')
+);
+    </script>
+  </body>
+```
+
+## 2. 杂乱
+### 2.1 React 的本质
+``React 的本质是将图形界面（GUI）函数化。``
+### 2.2 React 没有解决的问题
+如果开发大型应用
+有两个问题
+- ``组织代码``
+- ``组件通信``
+
+### 2.3 架构
+React 只是``View层的解决方案``,可以用任何一种架构[MVC/MVVM之类]
+
+### 2.4 通信
+React 三种通信
+- ``父``组件与``子``组件
+- ``子``组件与``父``组件
+- ``非父子``的``其他``组件
+
+### 2.5 状态的同步
+通信的``本质``是``状态``的同步。
+React 同步状态的基本方法：找到通信双方最近的``共同父组件``，通过它的state，使得子组件的状态保持同步
+
+### 2.6 Flux 架构
+Flux 是一种架构思想，专门解决软件的结构问题。它跟MVC 架构是同一类东西，但是更加简单和清晰。
+
+**基本概念**
+> 首先，Flux将一个应用分成四个部分。
+
+- ``View``： 视图层
+- ``Action``（动作）：视图层发出的消息（比如mouseClick）
+- ``Dispatcher``（派发器）：用来接收Actions、执行回调函数
+- ``Store``（数据层）：用来存放应用的状态，一旦发生变动，就提醒Views要更新页面
+
+> **单向流动**
