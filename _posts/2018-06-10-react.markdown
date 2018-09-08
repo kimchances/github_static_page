@@ -2,7 +2,7 @@
 layout:       post
 title:        "React Record 1.2"
 subtitle:     基于阮一峰 JSTRAINING
-date:         2018-06-10 14:46:37 +0800
+date:         2018-6-10 16:00:01 +0800
 author:       "Kim"
 header-img:   "/img/default-bg.jpg"
 header-mask:  0.3
@@ -93,4 +93,121 @@ Flux 是一种架构思想，专门解决软件的结构问题。它跟MVC 架�
 - ``Dispatcher``（派发器）：用来接收Actions、执行回调函数
 - ``Store``（数据层）：用来存放应用的状态，一旦发生变动，就提醒Views要更新页面
 
-> **单向流动**
+> **单向流动** ``Action > Dispatcher > Store[change] > View[UPDATE]``
+
+### 2.7目前最流行的两个 React 架构
+React 架构的最重要作用：**管理 Store 与 View 之间的关系**。
+``MobX：响应式（Reactive）`` 管理，state 是可变对象，适合中小型项目
+``Redux：函数式（Functional）`` 管理，state 是不可变对象，适合大型项目
+
+
+## 3. MobX 架构
+``观察者模式``
+- 组件是观察者（**observer**）
+- Store 是被观察者（**observable**）
+
+``` less
+<body>
+<div id="app"></div>
+<script src="./react-15.1.0.js"></script>
+<script src="./react-dom-15.1.0.js"></script>
+<script src="./babel.min.js"></script>
+<script src="./mobx.umd.js"></script>
+<script src="./mobx-react.js"></script>
+<script type="text/babel">
+const {observable, computed} = mobx;
+const {observer} = mobxReact;
+const {Component} = React;
+const {render}  = ReactDOM
+
+/*被观察的东西*/
+const person = observable({
+  name: "张三",
+  age: 31
+});
+
+/*观察者, 一个对象,组件*/
+const App = observer(
+  ({ person }) => <h1>{ person.name }</h1>
+);
+/*组件传入被观察的对象*/
+render(<App person={person} />, document.getElementById('app'));
+
+person.name = "李四";
+</script>
+</body>
+```
+
+
+> app目录下 index.html 只引入了 bundle.js 可是能够直接使用其他东西.[webpack还没学,到时候学了再回来回顾一下. 2018-6-8 15:05:22]
+
+``index.html``
+
+``` html
+<html>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>React-Babel-Webpack Boileplate</title>
+  <body>
+  /*webpack*/
+    <script type="text/javascript" src="bundle.js"></script>
+  </body>
+</html>
+```
+
+``store.js``
+``` less
+import { observable, computed } from 'mobx'; /*被观察 引入 mobx*/
+
+class Store {
+  /*observable 被观察*/
+  @observable name = 'Bartek';
+   /*
+   computed 特殊的标签 优化代码逻辑
+   等于===
+	   getDecorated() {
+			return `${this.name} is awesome!`;
+	   }
+   */
+  @computed get decorated() {
+    return `${this.name} is awesome!`;
+  }
+}
+
+export default Store;
+
+```
+
+``main.jsx``
+``` less
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { observer } from 'mobx-react'; /*观察者 引入 mobx-react 长的就是老大*/
+
+import Store from './store';
+
+@observer
+class App extends React.Component {
+  render() {
+    return (
+      <div className="index">
+        <p>{this.props.store.decorated}</p>
+        <input defaultValue={this.props.store.name} onChange={(event) => this.props.store.name = event.currentTarget.value}/>
+      </div>
+    );
+  }
+}
+
+const store = new Store();  /*import Store from './store'; 引入了*/
+
+ReactDOM.render(
+  <App store={store} />,  /*直接传入了对象数据*/
+  document.body.appendChild(document.createElement('div'))
+);
+
+```
+
+
+## 4. Reduc 架构
+- 所有的状态存放在Store。组件每次重新渲染，都必须由状态变化引起。
+- 用户在 UI 上发出action。
+- reducer函数接收action，然后根据当前的state，计算出新的state。
